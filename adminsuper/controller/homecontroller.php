@@ -6,6 +6,8 @@ class homecontroller extends controller
 		$this->admin=$this->loadmodel("admin");
 		$this->place=$this->loadmodel("place");
 		$this->start=$this->loadmodel("start");
+		$this->route=$this->loadmodel("route");
+		$this->gallery=$this->loadmodel('gallery');
 	}
 	function index()
 	{
@@ -40,7 +42,18 @@ class homecontroller extends controller
 		sessionhelper::checklogin();
 		$this->loadview('addplace');
 	}
-
+	function guiderlist()
+	{
+		sessionhelper::checklogin();
+		$this->output=$this->admin->guiderlist();
+		$this->loadview("guiderlist");
+	}
+	function travellist()
+	{
+		sessionhelper::checklogin();
+		$this->output=$this->admin->travellist();
+		$this->loadview("travellist");
+	}
 
 	function addplacepost()
 	{
@@ -87,6 +100,114 @@ class homecontroller extends controller
 		sessionhelper::checklogin();
 		$this->output=$this->start->placelist();
 		$this->loadview('startlist');
+	}
+	function deletedest()
+	{
+		sessionhelper::checklogin();
+		$this->place->deletedest($_GET['id']);
+		header("location:placelist");
+	}
+	function addroutepost()
+	{
+		sessionhelper::checklogin();
+		$this->route->dest_name=$this->route->escapestring($_POST['dest_name']);
+		$this->route->start_name=$this->route->escapestring($_POST['start_name']);
+		$this->route->route_desc=$this->route->escapestring($_POST['route_desc']);
+		$this->route->adv_routes=$this->route->escapestring($_POST['adv_routes']);
+		$this->route->des_routes=$this->route->escapestring($_POST['des_route']);
+		$this->route->other_places=$this->route->escapestring($_POST['other_place']);
+		$this->output=$this->route->insertroute();
+		if($this->output)
+		{
+			sessionhelper::set("success","Route added successfully");
+			header("location:addroute");
+		}
+		else 
+		{
+			sessionhelper::set("success","Route addition failed");
+			header("location:addroute");
+		}
+	}
+	function addroute()
+	{
+		sessionhelper::checklogin();
+		$this->output=$this->start->placelist();
+		$this->output1=$this->place->placelist();
+		$this->loadview("addroute");
+	}
+	function addimagepost()
+	{
+		sessionhelper::checklogin();
+		$num=$_POST['number'];
+		$s=0;
+		if($num==0)
+		{
+			$num=1;
+		}
+		
+		for($i=0;$i<$num;$i++)
+		{
+			$this->gallery->title=$_POST['title'.$i];
+				echo "yes";
+			if($_FILES['photo'.$i]['size']!=0 && $_FILES['photo'.$i]['error']==0)
+			{
+				$tmpname=$_FILES['photo'.$i]['name'];
+				$e=explode(".",$tmpname);
+				
+			foreach ($e as $v) {
+				$ext=$v;
+				}
+				$ext=end($e);
+				$name=uniqid();
+				move_uploaded_file($_FILES['photo'.$i]['tmp_name'], "view/images/".$name.".".$ext);
+				$this->gallery->photo=$name.".".$ext;
+				$id=$_POST['id'];
+				$output=$this->gallery->insertimage($id);
+				if(!$output)
+				{
+					$s=0;
+				}else
+				{
+					$s=1;
+				}
+			}
+
+		}
+		if($s==1)
+		sessionhelper::set("success","image inserted successfully");
+	else
+		sessionhelper::set("success","image insertion failed");
+		header("location:addimage?id=".$id);
+	}
+	function deleteroute()
+	{
+		$this->route->deleteroute($_GET['id']);
+		header("location:routelist");
+	}
+	function fulldetails()
+	{
+		sessionhelper::checklogin();
+		$this->output=$this->route->fulldetails($_GET['id']);
+		$this->output1=$this->gallery->fulldetails($_GET['id']);
+		$this->loadview("fulldetails");
+	}
+	function routelist()
+	{
+		sessionhelper::checklogin();
+		$this->output=$this->route->routelist();
+		$this->loadview("routelist");
+	}
+	function addimage()
+	{
+		sessionhelper::checklogin();
+		$this->loadview("addimage");
+	}
+	function deletestart()
+	{
+		sessionhelper::checklogin();
+		$this->start->deletestart($_GET['id']);
+		header("location:startlist");
+
 	}
 	function addstartpost()
 	{

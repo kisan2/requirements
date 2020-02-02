@@ -12,5 +12,12 @@ class start extends common
 		$sql="select * from tbl_start";
 		return $this->select($sql);
 	}
+	function deletestart($id)
+	{
+		$sql="delete from tbl_start where id=$id";
+	//	echo $sql;
+		return $this->delete($sql);
+	}
+	
 }
 ?>

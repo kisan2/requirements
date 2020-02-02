@@ -69,6 +69,48 @@ if ($count==1) {
 	{
 		$homecontroller->palcestartlist();
 	}
+	else if($url[0]=="guiderlist")
+	{
+		$homecontroller->guiderlist();
+	}
+	else if($url[0]=="travellist")
+	{
+		$homecontroller->travellist();
+	}
+	else if($url[0]=="deletedest")
+	{
+		$homecontroller->deletedest();
+	}else if($url[0]=="deletestart")
+	{
+		$homecontroller->deletestart();
+	}
+	else if($url[0]=="addroute")
+	{
+		$homecontroller->addroute();
+	}
+	else if($url[0]=="addroutepost")
+	{
+		$homecontroller->addroutepost();
+	}
+	else if($url[0]=="routelist")
+	{
+		$homecontroller->routelist();
+	}else if($url[0]=="addimage")
+	{
+		$homecontroller->addimage();
+	}
+	else if($url[0]=="addimagepost")
+	{
+		$homecontroller->addimagepost();
+	}
+	else if($url[0]=="fulldetails")
+	{
+		$homecontroller->fulldetails();
+	}
+	else if($url[0]=="deleteroute")
+	{
+		$homecontroller->deleteroute();
+	}
 	else
 	{
 		require_once "view/404.php";

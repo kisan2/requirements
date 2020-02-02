@@ -10,7 +10,7 @@
        <!--grid-->
       <div class="row">
         <div class="col-lg-12">
-          <h1 class="page-header">Active Hotel List</h1>
+          <h1 class="page-header">Start Position</h1>
         </div>
       </div>
 
@@ -48,7 +48,7 @@
 
                                  //  echo "<td><a href='".base_url()."view/images/".$o->venue_photo."'><img src='".base_url()."view/images/".$o->venue_photo."' height='50px' width='50px'></td>";
                                   // echo "<td>$o->last_login</td>";
-                                   echo "<td><a href='".base_url()."' class='btn btn-primary'>update</td>";
+                                   echo "<td><a href='".base_url()."deletestart?id=".$o->id."' class='btn btn-danger'>Delete</a></td>";
                                  
                             }
                             ?>

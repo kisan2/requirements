@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Visit Nepal 2020</title>
+<title>NEPOURISM</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Minimal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -110,7 +110,7 @@ function googleTranslateElementInit() {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <h1> <a class="navbar-brand" href="index.html">Visit Nepal 2020</a></h1>         
+               <h1> <a class="navbar-brand" href="index.html">NEPOURISM</a></h1>         
 			   </div>
 			 <div class=" border-bottom">
         	<div class="full-left">
@@ -137,6 +137,7 @@ function googleTranslateElementInit() {
 		              echo $val;
 		               ?>
 		            </li>
+                    <script src="<?php echo base_url().'view/js/ckeditor/ckeditor.js' ?>"></script>
 		           
 		        </ul>
 		     </div><!-- /.navbar-collapse -->
@@ -157,41 +158,36 @@ function googleTranslateElementInit() {
                         <a href="<?php echo 'register' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Register</span> </a>
                     </li>
                      <li>
-                        <a href="<?php echo 'activehotel' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Active Hotels</span> </a>
+                        <a href="<?php echo 'activehotel' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label"> Hotels</span> </a>
                     </li>
-                    
                     <li>
-                        <a href="<?php echo 'inactivehotel' ?>" class=" hvr-bounce-to-right"><i class="fa fa-picture-o nav_icon"></i> <span class="nav-label">Inactive Hotels</span> </a>
+                        <a href="<?php echo 'travellist' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Guider List</span> </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo 'travellist' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Travel List</span> </a>
                     </li>
                      <li>
-                        <a href="<?php echo 'addplace' ?>" class=" hvr-bounce-to-right"><i class="fa fa-desktop nav_icon"></i> <span class="nav-label">Add Place</span></a>
+                        <a href="<?php echo 'addplace' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Add Destination</span></a>
                       
                     </li>
                      <li>
-                        <a href="<?php echo 'placelist' ?>" class=" hvr-bounce-to-right"><i class="fa fa-th nav_icon"></i> <span class="nav-label">Place List</span> </a>
+                        <a href="<?php echo 'placelist' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Destination List</span> </a>
                     </li>
                      <li>
-                        <a href="<?php echo 'addstart' ?>" class=" hvr-bounce-to-right"><i class="fa fa-th nav_icon"></i> <span class="nav-label">Add Start</span> </a>
+                        <a href="<?php echo 'addstart' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Add Start</span> </a>
                          <li>
-                        <a href="<?php echo 'startlist' ?>" class=" hvr-bounce-to-right"><i class="fa fa-th nav_icon"></i> <span class="nav-label">Start List</span> </a>
+                        <a href="<?php echo 'startlist' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Start List</span> </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="<?php echo 'addroute' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Add Route</span> </a>
+                         <li>
+                        <a href="<?php echo 'routelist' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Route List</span> </a>
                     </li>
                     </li>
                    
-                    <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-list nav_icon"></i> <span class="nav-label">Forms</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="forms.html" class=" hvr-bounce-to-right"><i class="fa fa-align-left nav_icon"></i>Basic forms</a></li>
-                            <li><a href="validation.html" class=" hvr-bounce-to-right"><i class="fa fa-check-square-o nav_icon"></i>Validation</a></li>
-                        </ul>
-                    </li>
+                  
                    
-                    <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-cog nav_icon"></i> <span class="nav-label">Settings</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="signin.html" class=" hvr-bounce-to-right"><i class="fa fa-sign-in nav_icon"></i>Signin</a></li>
-                            <li><a href="signup.html" class=" hvr-bounce-to-right"><i class="fa fa-sign-in nav_icon"></i>Singup</a></li>
-                        </ul>
-                    </li>
                     <li>
                         <a href="<?php echo 'logout' ?>" class=" hvr-bounce-to-right"><i class="fa fa-th nav_icon"></i> <span class="nav-label">Logout</span> </a>
                     </li>

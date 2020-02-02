@@ -12,5 +12,10 @@ class place extends common
 		$sql="select * from tbl_place";
 		return $this->select($sql);
 	}
+	function deletedest($id)
+	{
+		$sql="delete from tbl_place where place_id=$id";
+		return $this->delete($sql);
+	}
 }
 ?>

@@ -48,7 +48,7 @@
 
                                    echo "<td><a href='".base_url()."view/images/".$o->admin_profile_photo."'><img src='".base_url()."view/images/".$o->admin_profile_photo."' height='50px' width='50px'></td>";
                                    echo "<td>$o->last_login</td>";
-                                   echo "<td><a href='".base_url()."' class='btn btn-primary'>update</td>";
+                                   echo "<td><a href='".base_url()."' class='btn btn-primary'>update</a></td>";
                                  
                             }
                             ?>

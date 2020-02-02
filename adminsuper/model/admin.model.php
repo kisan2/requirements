@@ -26,5 +26,15 @@
  		$sql="select * from tbl_admin where status='$status' and admin_type='2'";
  		return $this->select($sql);
  	}
+ 	function guiderlist()
+ 	{
+ 		$sql="select * from tbl_admin where admin_type='3'";
+ 		return $this->select($sql);
+ 	}
+ 	function travellist()
+ 	{
+ 		$sql="select * from tbl_admin where admin_type='4'";
+ 		return $this->select($sql);
+ 	}
  }
  ?>
