@@ -111,9 +111,38 @@ if ($count==1) {
 	{
 		$homecontroller->deleteroute();
 	}
+	else if($url[0]=="commentlist")
+	{
+		$homecontroller->commentlist();
+	}
+	else if($url[0]=="deletecomment")
+	{
+
+		$homecontroller->deletecomment();
+	}
+	else if($url[0]=="addevent")
+	{
+		$homecontroller->addevent();
+	}
+	else if($url[0]=="addeventpost")
+	{
+		$homecontroller->addeventpost();
+	}
+	else if($url[0]=="eventlist")
+	{
+		$homecontroller->eventlist();
+	}
+	else if($url[0]=="deletevent")
+	{
+		$homecontroller->deletevent();
+	}
+	else if($url[0]=="donate")
+	{
+		$homecontroller->donate();
+	}
 	else
 	{
-		require_once "view/404.php";
+		require_once "view/404/404.php";
 	}
 }
 

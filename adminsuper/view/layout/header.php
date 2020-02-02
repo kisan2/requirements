@@ -110,12 +110,12 @@ function googleTranslateElementInit() {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <h1> <a class="navbar-brand" href="index.html">NEPOURISM</a></h1>         
+               <h1> <a class="navbar-brand" href="index">NEPOURISM</a></h1>         
 			   </div>
 			 <div class=" border-bottom">
         	<div class="full-left">
         	  <section class="full-top">
-				<button id="toggle"><img src="<?php echo base_url().'view/images/logo.jpg' ?>" height="50px" width="200px"></button>	
+				<button id="toggle"><img src="<?php echo base_url().'view/images/logo.png' ?>" height="100px" width="100px"></button>	
 			</section>
 		
             <div class="clearfix"> </div>
@@ -184,6 +184,18 @@ function googleTranslateElementInit() {
                          <li>
                         <a href="<?php echo 'routelist' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Route List</span> </a>
                     </li>
+                    </li>
+                    <li>
+                        <a href="<?php echo 'commentlist' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">All Comment</span> </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo 'addevent' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Add Event</span> </a>
+                    </li>
+                     <li>
+                        <a href="<?php echo 'eventlist' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label"> Event List</span> </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo 'donate' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label"> Donate List</span> </a>
                     </li>
                    
                   

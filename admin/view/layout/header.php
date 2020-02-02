@@ -110,12 +110,12 @@ function googleTranslateElementInit() {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <h1> <a class="navbar-brand" href="index.html">NEPOURISM</a></h1>         
+               <h1> <a class="navbar-brand" href="index">NEPOURISM</a></h1>         
 			   </div>
 			 <div class=" border-bottom">
         	<div class="full-left">
         	  <section class="full-top">
-				<button id="toggle"><img src="<?php echo base_url().'view/images/logo.jpg' ?>" height="50px" width="200px"></button>	
+				<button id="toggle"><img src="<?php echo base_url().'view/images/logo.png' ?>" height="100px" width="100px"></button>	
 			</section>
 		
             <div class="clearfix"> </div>

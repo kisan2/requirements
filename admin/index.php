@@ -74,7 +74,7 @@ else if($url[0]=="logout")
 }
 	else
 	{
-		require_once "view/404.php";
+		require_once "view/404/404.php";
 	}
 }
 

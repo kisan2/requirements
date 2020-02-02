@@ -32,7 +32,7 @@ function googleTranslateElementInit() {
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	<div class="login">
-		<h1><a href="index.html">Visit Nepal 2020 </a></h1>
+		<h1><a href="index.html">Neporisum </a></h1>
 		<div class="login-bottom">
 			<h2>Login</h2>
 			<form method="post" action="<?php echo base_url().'post.login' ?>">

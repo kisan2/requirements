@@ -24,14 +24,5 @@ if ($count==1) {
 		require_once "view/404.php";
 	}
 }
-elseif($count==5)
-{
-	require_once 'controller/notescontroller.php';
-	$notescontroller = new notescontroller;
-	$notescontroller->index($url[0],$url[1],$url[2],$url[3],$url[4]);
-}
-else
-	{
-		require_once "view/404.php";
-	}
+
 ?>

@@ -8,6 +8,9 @@ class homecontroller extends controller
 		$this->start=$this->loadmodel("start");
 		$this->route=$this->loadmodel("route");
 		$this->gallery=$this->loadmodel('gallery');
+		$this->comment=$this->loadmodel("comment");
+		$this->event=$this->loadmodel("event");
+		$this->donate=$this->loadmodel("donate");
 	}
 	function index()
 	{
@@ -294,9 +297,60 @@ class homecontroller extends controller
 		$this->output=$this->admin->hotellist(0);
 		$this->loadview('inactivehotel');
 	}
+	function commentlist()
+	{
+		sessionhelper::checklogin();
+		$this->output=$this->comment->list();
+		$this->loadview("commentlist");
+	}
+	function addevent()
+	{
+		sessionhelper::checklogin();
+		$this->loadview("addevent");
+	}
+	function donate()
+	{
+		sessionhelper::checklogin();
+		$this->output=$this->donate->donatelist();
+		$this->loadview("donatelist");
+	}
+	function addeventpost()
+	{
+		sessionhelper::checklogin();
+		$this->event->event_title=$_POST['event_title'];
+		$this->event->start_date_time=$_POST['start_date_time'];
+		$this->event->end_date_time=$_POST['end_date_time'];
+		$this->event->event_description=$_POST['event_description'];
+		$this->output=$this->event->addevent();
+		if($this->output)
+		{
+			sessionhelper::set("success","Event Added successfully");
+		}else
+		{
+			sessionhelper::set("success","Event Addition Failed");
+		}
+		header("location:addevent");
+	}
+	function deletevent()
+	{
+		sessionhelper::checklogin();
+		$this->event->deletevent($_GET['id']);
+		header("location:eventlist");
+	}
+	function eventlist()
+	{
+		sessionhelper::checklogin();
+		$this->output=$this->event->allevent();
+		$this->loadview("eventlist");
+	}
 	function routeregister()
 	{
 		
+	}
+	function deletecomment()
+	{
+		$this->comment->deletecom($_GET['id']);
+		header("location:commentlist");
 	}
 	function postlogin()
 	{
