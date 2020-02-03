@@ -13,15 +13,43 @@ else
 }
 $count=count($url);
 if ($count==1) {
+	require_once 'controller/homecontroller.php';
+		$homecontroller = new homecontroller;
 	if($url[0]=='index')
 	{
-		require_once 'controller/homecontroller.php';
-		$homecontroller = new homecontroller;
+		
 		$homecontroller->index();
+	}
+	else if($url[0]=="destlist")
+	{
+
+		$homecontroller->destlist();
+	}
+	else if($url[0]=="travelcheck")
+	{
+		$homecontroller->travelcheck();
+	}else if($url[0]=="join")
+	{
+		$homecontroller->join();
+	}else if($url[0]=="submitdonate")
+	{
+		$homecontroller->submitdonate();
+	}
+	else if($url[0]=="submitcomment")
+	{
+		$homecontroller->submitcomment();
+	}
+	else if($url[0]=="details")
+	{
+		$homecontroller->details();
+	}
+	else if($url[0]=="message")
+	{
+		$homecontroller->message();
 	}
 	else
 	{
-		require_once "view/404.php";
+		require_once "view/404/404.php";
 	}
 }
 

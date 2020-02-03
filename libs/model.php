@@ -3,7 +3,7 @@
 class common{
 
 	function __construct(){
-		$this->con=new mysqli('localhost','root','','db_notehub');
+		$this->con=new mysqli('localhost','root','','db_tourism');
 		if ($this->con->connect_error) {
 			die("Database Connection Error");
 		}

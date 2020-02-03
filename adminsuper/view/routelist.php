@@ -27,10 +27,8 @@
                             
                             <th data-field="sem">Destination Name</th>
                             <th data-field="pro">Start Name</th>
-                            <th data-field="sem"> Route Description</th>
-                            <th data-field="sem">Route Advantages</th>
-                          <th data-field="Faculty Name">Route Disadvantages</th>
-                          <th data-field="Faculty Name">Other Places</th>
+                           
+                          <th data-field="Faculty Name">Route Description</th>
 
                             <th data-field="Faculty Name">Action</th>
                             <th data-field="Gallery">Add Gallery</th>
@@ -49,9 +47,7 @@
                                    echo "<td>$o->route_desc</td>";
                                    //echo "<td>$o->admin_type</td>";
 
-                                   echo "<td>$o->adv_routes</td>";
-                                   echo "<td>$o->des_routes</td>";
-                                   echo "<td>$o->other_places</td>";
+                                   
                                   // echo "<td>$o->last_login</td>";
                                    echo "<td><a href='".base_url()."deleteroute?id=".$o->id."' class='btn btn-danger'>Delete</a><a href='".base_url()."fulldetails?id=".$o->id."' class='btn btn-default'>Full Details</a></td>";
                                    echo "<td><a href='".base_url()."addimage?id=".$o->id."' class='btn btn-success'>Add Images</a></td>";

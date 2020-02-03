@@ -19,7 +19,7 @@
 		<!-- requried-jsfiles-for owl -->
 		
 		<!----->
-		<iframe src="../web/index.html" height="1300px" width="1300px"></iframe>
+		<iframe src="../" height="1300px" width="1300px"></iframe>
 			</div>
 			<div class="clearfix"> </div>
 		</div>

@@ -21,6 +21,11 @@
  		return $this->insert($sql);
 
  	}
+ 	function inclick($id)
+ 	{
+ 		$sql="update tbl_admin click=click+1 where admin_id=$id";
+ 		return $this->update($sql);
+ 	}
  	function hotellist($status)
  	{
  		$sql="select * from tbl_admin where status='$status' and admin_type='2'";

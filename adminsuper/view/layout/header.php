@@ -161,7 +161,7 @@ function googleTranslateElementInit() {
                         <a href="<?php echo 'activehotel' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label"> Hotels</span> </a>
                     </li>
                     <li>
-                        <a href="<?php echo 'travellist' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Guider List</span> </a>
+                        <a href="<?php echo 'guiderlist' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Tourist Guide List</span> </a>
                     </li>
                     <li>
                         <a href="<?php echo 'travellist' ?>" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">Travel List</span> </a>

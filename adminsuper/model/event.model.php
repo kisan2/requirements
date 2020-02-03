@@ -15,7 +15,7 @@ function allevent()
 function deletevent($id)
 {
 	$sql="delete from tbl_event where event_id='$id'";
-	echo $sql;
+	//echo $sql;
 	return $this->delete($sql);
 }
 
